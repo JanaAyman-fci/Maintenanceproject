@@ -19,5 +19,5 @@ This project is based on the UniTime system, which is used to generate and manag
 - Scalability
 - Maintainability
 
-## 🔧 Project Scope
+# Project Scope
 This project focuses on maintaining and improving the Java backend of the UniTime system by implementing bug fixes and new features.
