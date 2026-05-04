@@ -468,18 +468,18 @@ public abstract class BasePointInTimeDataReports {
 	public void setParameters(ArrayList<Parameter> parameters) { this.parameters = parameters; }
 	
 	protected void parseParameters() {
-		if (getParameterValues().get(Parameter.PITD).size() != 1){
-			//TODO: error
+		if (getParameterValues().get(Parameter.PITD) == null || getParameterValues().get(Parameter.PITD).size() != 1){
+			throw new IllegalArgumentException("Missing or invalid parameter: " + Parameter.PITD.name());
 		} else {
 			setPointInTimeDataUniqueId((Long)getParameterValues().get(Parameter.PITD).get(0));
 		}
-		if (getParameterValues().get(Parameter.MINUTES_IN_REPORTING_HOUR).size() != 1){
-			//TODO: error
+		if (getParameterValues().get(Parameter.MINUTES_IN_REPORTING_HOUR) == null || getParameterValues().get(Parameter.MINUTES_IN_REPORTING_HOUR).size() != 1){
+			throw new IllegalArgumentException("Missing or invalid parameter: " + Parameter.MINUTES_IN_REPORTING_HOUR.name());
 		} else {
 			setStandardMinutesInReportingHour((Float)getParameterValues().get(Parameter.MINUTES_IN_REPORTING_HOUR).get(0));
 		}
-		if (getParameterValues().get(Parameter.WEEKS_IN_REPORTING_TERM).size() != 1){
-			//TODO: error
+		if (getParameterValues().get(Parameter.WEEKS_IN_REPORTING_TERM) == null || getParameterValues().get(Parameter.WEEKS_IN_REPORTING_TERM).size() != 1){
+			throw new IllegalArgumentException("Missing or invalid parameter: " + Parameter.WEEKS_IN_REPORTING_TERM.name());
 		} else {
 			setStandardWeeksInReportingTerm((Float)getParameterValues().get(Parameter.WEEKS_IN_REPORTING_TERM).get(0));
 		}
