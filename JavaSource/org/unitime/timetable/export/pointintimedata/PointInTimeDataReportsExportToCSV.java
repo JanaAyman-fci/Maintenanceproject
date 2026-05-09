@@ -74,7 +74,27 @@ public class PointInTimeDataReportsExportToCSV implements Exporter {
 		BasePointInTimeDataReports rpt = null;
 		try {
 			rpt = (BasePointInTimeDataReports) rptCls.getDeclaredConstructor().newInstance();
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
+		} /*
+			 catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		*/
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new IllegalArgumentException("Failed to instantiate report: " + report, e);
 		}
 		if (rpt == null) throw new IllegalArgumentException("Report " + report + " does not exist.");
@@ -139,7 +159,27 @@ public class PointInTimeDataReportsExportToCSV implements Exporter {
 			BasePointInTimeDataReports rpt = null;
 			try {
 				rpt = (BasePointInTimeDataReports) rptCls.getDeclaredConstructor().newInstance();
-			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
+			}
+			/*
+			* 	 catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NoSuchMethodException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();*/
+			catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				throw new IllegalArgumentException("Failed to instantiate report: " + report, e);
 			}
 			if (rpt == null) throw new IllegalArgumentException("Report " + report + " does not exist.");
